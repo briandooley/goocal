@@ -21,7 +21,7 @@ Before you begin, ensure you have the following:
 * **Python 3.6 or higher:** You can download it from [python.org](https://www.python.org/downloads/).
 * **A Google Account:** This will be used to access your Google Calendar.
 * **Internet Connection:** To connect to Google's APIs.
-
+goocal
 ## Detailed Setup Instructions for Novice Users
 
 Follow these steps carefully to get the script up and running.
@@ -30,8 +30,8 @@ Follow these steps carefully to get the script up and running.
 
 1.  **Create a folder** on your computer where you want to store this script. Name it something simple and descriptive, like `google_calendar_script`.
 2.  **Create a new file** inside this folder. You can use any plain text editor (like Notepad on Windows, TextEdit on Mac, or [VS Code](https://code.visualstudio.com/) which is highly recommended for coding).
-3.  **Name the file `calendar_lister.py`**.
-4.  **Copy all the code** from the "**Python Script (`calendar_lister.py`)**" section at the very end of this README and paste it into your `calendar_lister.py` file. Save the file.
+3.  **Name the file `goocal.py`**.
+4.  **Copy all the code** from the "**Python Script (`goocal.py`)**" section at the very end of this README and paste it into your `goocal.py` file. Save the file.
 
 ### Step 2: Set up Google Cloud Project & Get Credentials
 
@@ -85,7 +85,7 @@ To allow your script to talk to your Google Calendar, you need to set up a proje
     * A dialog box will appear with your Client ID and Client secret.
     * Click the **"Download JSON"** button.
     * **Rename the downloaded file:** The file will likely have a long, generated name (e.g., `client_secret_YOUR_CLIENT_ID.apps.googleusercontent.com.json`). **You MUST rename this file to exactly `credentials.json`**.
-    * **Move `credentials.json`:** Place this renamed `credentials.json` file into the **same folder** (`google_calendar_script`) where you saved your `calendar_lister.py` script.
+    * **Move `credentials.json`:** Place this renamed `credentials.json` file into the **same folder** (`google_calendar_script`) where you saved your `goocal.py` script.
 
 ### Step 3: Install Python Libraries
 
@@ -106,7 +106,7 @@ Now you're ready to run the script.
 
 1.  In your Terminal/Command Prompt (ensure you are still in your `google_calendar_script` folder), run the script using the Python 3 interpreter:
     ```bash
-    python3 calendar_lister.py
+    python3 goocal.py
     ```
     (If `python3` doesn't work, try `python` instead.)
 
@@ -125,21 +125,21 @@ Once setup is complete, you can run the script:
 
 * **To list events for the default 30 days:**
     ```bash
-    python3 calendar_lister.py
+    python3 goocal.py
     ```
 * **To list events for a specific number of days (e.g., next 7 days):**
     ```bash
-    python3 calendar_lister.py 7
+    python3 goocal.py 7
     ```
 * **To list events for 60 days:**
     ```bash
-    python3 calendar_lister.py 60
+    python3 goocal.py 60
     ```
     *(Remember to replace `python3` with `python` if that's what works on your system.)*
 
 ## Customization (Optional)
 
-You can open the `calendar_lister.py` file in a text editor to make minor adjustments to its behavior:
+You can open the `goocal.py` file in a text editor to make minor adjustments to its behavior:
 
 * **Change target calendars:** Modify the `target_calendar_names` list near the top of the `get_combined_calendar_events` function to include other specific calendar names you want to monitor.
     ```python
